@@ -1,26 +1,452 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./workintech.svg" />
-    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workintech + 🍕</title>
+    <meta
+      name="description"
+      content="Teknolojik Yemekler ile pizza ve burger menülerini keşfet, siparişini damak zevkine göre oluştur."
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/iteration-2/icons/2.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Teknolojik Yemekler | Pizza ve Burger Siparişi</title>
   </head>
 
   <body>
-    <div id="app">
-      <div>
-        <a href="https://github.com/Workintech/fsweb-s5-bonus-challenge-html-pizza" target="_blank">
-          <img src="./workintech.svg" class="logo" alt="Workintech logo">
-        </a>
-        <h1>Hello Coder!</h1>
-        <p class="read-the-docs">
-          Click on the Workintech logo to see the Readme of the project
-        </p>
-      </div>
+    <div id="app" class="site">
+      <header class="hero" id="anasayfa">
+        <img
+          class="hero__background"
+          src="/assets/iteration-1/home-banner.png"
+          alt=""
+          width="1920"
+          height="1080"
+        />
+
+        <div class="hero__content">
+          <a class="hero__brand" href="#anasayfa" aria-label="Teknolojik Yemekler ana sayfa">
+            <img
+              src="/assets/iteration-1/logo.svg"
+              alt="Teknolojik Yemekler"
+              width="363"
+              height="47"
+            />
+          </a>
+          <p class="hero__eyebrow">fırsatı kaçırma</p>
+          <h1>Kod Acıktırır, Pizza Doyurur</h1>
+          <a class="button button--primary" href="#siparis">Acıktım</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="categories" aria-labelledby="categories-title">
+          <h2 id="categories-title" class="section-title">Menümüzde Neler Var?</h2>
+          <nav class="category-nav" aria-label="Yemek kategorileri">
+            <ul class="category-nav__list">
+              <li>
+                <a class="category-nav__link" href="#menu">
+                  <img src="/assets/iteration-2/icons/1.svg" alt="" width="42" height="42" />
+                  <span>YENİ! Kore</span>
+                </a>
+              </li>
+              <li>
+                <a class="category-nav__link" href="#menu">
+                  <img src="/assets/iteration-2/icons/2.svg" alt="" width="42" height="42" />
+                  <span>Pizza</span>
+                </a>
+              </li>
+              <li>
+                <a class="category-nav__link" href="#menu">
+                  <img src="/assets/iteration-2/icons/3.svg" alt="" width="42" height="42" />
+                  <span>Burger</span>
+                </a>
+              </li>
+              <li>
+                <a class="category-nav__link" href="#menu">
+                  <img src="/assets/iteration-2/icons/4.svg" alt="" width="42" height="42" />
+                  <span>Kızartmalar</span>
+                </a>
+              </li>
+              <li>
+                <a class="category-nav__link" href="#menu">
+                  <img src="/assets/iteration-2/icons/5.svg" alt="" width="42" height="42" />
+                  <span>Fast food</span>
+                </a>
+              </li>
+              <li>
+                <a class="category-nav__link" href="#menu">
+                  <img src="/assets/iteration-2/icons/6.svg" alt="" width="42" height="42" />
+                  <span>Gazlı İçecek</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="promotions" aria-labelledby="promotions-title">
+          <h2 id="promotions-title" class="section-title">Günün Fırsatları</h2>
+          <div class="promotion-grid">
+            <article class="promotion-card promotion-card--featured">
+              <img
+                class="promotion-card__image"
+                src="/assets/iteration-2/cta/kart-1.png"
+                alt="Özel Lezzetus kampanyası için hazırlanmış pizzalar"
+                width="636"
+                height="536"
+                loading="lazy"
+              />
+              <div class="promotion-card__content">
+                <h3>Özel Lezzetus</h3>
+                <p>Position: Absolute Acı Burger</p>
+                <a class="button button--secondary" href="#siparis">Sipariş Ver</a>
+              </div>
+            </article>
+
+            <article class="promotion-card">
+              <img
+                class="promotion-card__image"
+                src="/assets/iteration-2/cta/kart-2.png"
+                alt="Patates kızartması ve içecekle sunulan burger menüsü"
+                width="636"
+                height="256"
+                loading="lazy"
+              />
+              <div class="promotion-card__content">
+                <h3>Hackathlon Burger Menü</h3>
+                <a class="button button--secondary" href="#siparis">Sipariş Ver</a>
+              </div>
+            </article>
+
+            <article class="promotion-card">
+              <img
+                class="promotion-card__image"
+                src="/assets/iteration-2/cta/kart-3.png"
+                alt="Sipariş taşıyan hızlı kurye"
+                width="636"
+                height="257"
+                loading="lazy"
+              />
+              <div class="promotion-card__content">
+                <h3>Çoooook Hızlı, npm Gibi Kurye</h3>
+                <a class="button button--secondary" href="#siparis">Sipariş Ver</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="popular-menu" id="menu" aria-labelledby="menu-title">
+          <header class="section-heading">
+            <p class="section-heading__eyebrow">en çok paketlenen menüler</p>
+            <h2 id="menu-title">Acıktıran Kodlara Doyuran Lezzetler</h2>
+          </header>
+
+          <div class="product-grid">
+            <article class="product-card" id="terminal-pizza">
+              <img
+                class="product-card__image"
+                src="/assets/iteration-2/pictures/food-1.png"
+                alt="Mantar, mısır ve fesleğenli Terminal Pizza"
+                width="306"
+                height="307"
+                loading="lazy"
+              />
+              <h3>Terminal Pizza</h3>
+              <div class="product-card__details">
+                <p><span class="sr-only">Puan:</span> 4.9</p>
+                <p><span class="sr-only">Değerlendirme:</span> (200)</p>
+                <p class="product-card__price">60 ₺</p>
+              </div>
+            </article>
+
+            <article class="product-card" id="absolute-pizza">
+              <img
+                class="product-card__image"
+                src="/assets/iteration-2/pictures/food-2.png"
+                alt="Mantar, peynir ve fesleğenli Position Absolute Acı Pizza"
+                width="306"
+                height="307"
+                loading="lazy"
+              />
+              <h3>Position Absolute Acı Pizza</h3>
+              <div class="product-card__details">
+                <p><span class="sr-only">Puan:</span> 4.9</p>
+                <p><span class="sr-only">Değerlendirme:</span> (928)</p>
+                <p class="product-card__price">85 ₺</p>
+              </div>
+            </article>
+
+            <article class="product-card" id="use-effect-burger">
+              <img
+                class="product-card__image"
+                src="/assets/iteration-2/pictures/food-3.png"
+                alt="Izgara tavuk ve cheddar peynirli useEffect Tavuklu Burger"
+                width="306"
+                height="307"
+                loading="lazy"
+              />
+              <h3>useEffect Tavuklu Burger</h3>
+              <div class="product-card__details">
+                <p><span class="sr-only">Puan:</span> 4.9</p>
+                <p><span class="sr-only">Değerlendirme:</span> (462)</p>
+                <p class="product-card__price">75 ₺</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="order" id="siparis" aria-labelledby="order-title">
+          <div class="order__intro">
+            <img
+              class="order__image"
+              src="/assets/iteration-2/pictures/form-banner.png"
+              alt="Mantar ve fesleğenli Position Absolute Acı Pizza"
+              width="595"
+              height="291"
+              loading="lazy"
+            />
+            <div class="order__description">
+              <p class="order__eyebrow">Position Absolute Acı Pizza</p>
+              <h2 id="order-title">Pizza Siparişini Oluştur</h2>
+              <p>
+                Boyutunu, hamurunu ve sevdiğin malzemeleri seç; pizzanı damak zevkine göre
+                hazırlayalım.
+              </p>
+            </div>
+          </div>
+
+          <form class="order-form">
+            <div class="form-field">
+              <label for="customer-name">Adınız</label>
+              <input
+                type="text"
+                id="customer-name"
+                name="customerName"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <fieldset class="form-fieldset">
+              <legend>Boyut Seç <span aria-hidden="true">*</span></legend>
+              <div class="option-list option-list--inline">
+                <label class="choice" for="size-small">
+                  <input type="radio" id="size-small" name="size" value="S" required />
+                  Küçük (S)
+                </label>
+                <label class="choice" for="size-medium">
+                  <input type="radio" id="size-medium" name="size" value="M" />
+                  Orta (M)
+                </label>
+                <label class="choice" for="size-large">
+                  <input type="radio" id="size-large" name="size" value="L" />
+                  Büyük (L)
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field">
+              <label for="dough">Hamur Seç <span aria-hidden="true">*</span></label>
+              <select id="dough" name="dough" required>
+                <option value="">Hamur kalınlığı seçin</option>
+                <option value="ince">İnce</option>
+                <option value="normal">Normal</option>
+                <option value="kalin">Kalın</option>
+              </select>
+            </div>
+
+            <fieldset class="form-fieldset" aria-describedby="extras-help">
+              <legend>Ek Malzemeler</legend>
+              <p id="extras-help">Dilediğiniz malzemeleri seçin. Her biri 5 ₺.</p>
+              <div class="option-list option-list--grid">
+                <label class="choice" for="extra-pepperoni">
+                  <input type="checkbox" id="extra-pepperoni" name="extras" value="pepperoni" />
+                  Pepperoni
+                </label>
+                <label class="choice" for="extra-sausage">
+                  <input type="checkbox" id="extra-sausage" name="extras" value="sosis" />
+                  Sosis
+                </label>
+                <label class="choice" for="extra-ham">
+                  <input type="checkbox" id="extra-ham" name="extras" value="kanada-jambonu" />
+                  Kanada Jambonu
+                </label>
+                <label class="choice" for="extra-chicken">
+                  <input type="checkbox" id="extra-chicken" name="extras" value="tavuk-izgara" />
+                  Tavuk Izgara
+                </label>
+                <label class="choice" for="extra-onion">
+                  <input type="checkbox" id="extra-onion" name="extras" value="sogan" />
+                  Soğan
+                </label>
+                <label class="choice" for="extra-tomato">
+                  <input type="checkbox" id="extra-tomato" name="extras" value="domates" />
+                  Domates
+                </label>
+                <label class="choice" for="extra-corn">
+                  <input type="checkbox" id="extra-corn" name="extras" value="misir" />
+                  Mısır
+                </label>
+                <label class="choice" for="extra-sucuk">
+                  <input type="checkbox" id="extra-sucuk" name="extras" value="sucuk" />
+                  Sucuk
+                </label>
+                <label class="choice" for="extra-jalapeno">
+                  <input type="checkbox" id="extra-jalapeno" name="extras" value="jalapeno" />
+                  Jalapeno
+                </label>
+                <label class="choice" for="extra-garlic">
+                  <input type="checkbox" id="extra-garlic" name="extras" value="sarimsak" />
+                  Sarımsak
+                </label>
+                <label class="choice" for="extra-pepper">
+                  <input type="checkbox" id="extra-pepper" name="extras" value="biber" />
+                  Biber
+                </label>
+                <label class="choice" for="extra-pineapple">
+                  <input type="checkbox" id="extra-pineapple" name="extras" value="ananas" />
+                  Ananas
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field">
+              <label for="order-note">Sipariş Notu</label>
+              <textarea
+                id="order-note"
+                name="orderNote"
+                rows="4"
+                placeholder="Siparişine eklemek istediğin bir not var mı?"
+              ></textarea>
+            </div>
+
+            <div class="order-form__footer">
+              <div class="form-field form-field--quantity">
+                <label for="quantity">Adet</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" />
+              </div>
+
+              <dl class="order-summary">
+                <div>
+                  <dt>Seçimler</dt>
+                  <dd>0 ₺</dd>
+                </div>
+                <div>
+                  <dt>Toplam</dt>
+                  <dd>85 ₺</dd>
+                </div>
+              </dl>
+
+              <button class="button button--submit" type="submit">Sipariş Ver</button>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="iletisim">
+        <div class="site-footer__about">
+          <a href="#anasayfa" aria-label="Teknolojik Yemekler ana sayfa">
+            <img
+              class="site-footer__logo"
+              src="/assets/iteration-2/footer/logo-footer.svg"
+              alt="Teknolojik Yemekler"
+              width="184"
+              height="88"
+              loading="lazy"
+            />
+          </a>
+
+          <address class="contact-list">
+            <p>
+              <img src="/assets/iteration-2/footer/icons/icon-1.png" alt="" width="28" height="28" />
+              341 Londonderry Road, İstanbul Türkiye
+            </p>
+            <p>
+              <img src="/assets/iteration-2/footer/icons/icon-2.png" alt="" width="28" height="29" />
+              <a href="mailto:aciktim@teknolojikyemekler.com">aciktim@teknolojikyemekler.com</a>
+            </p>
+            <p>
+              <img src="/assets/iteration-2/footer/icons/icon-3.png" alt="" width="28" height="29" />
+              <a href="tel:+902121234567">+90 212 123 45 67</a>
+            </p>
+          </address>
+        </div>
+
+        <nav class="footer-menu" aria-labelledby="footer-menu-title">
+          <h2 id="footer-menu-title">Sıccacık Menüler</h2>
+          <ul>
+            <li><a href="#terminal-pizza">Terminal Pizza</a></li>
+            <li><a href="#menu">5 Kişilik Hackathlon Pizza</a></li>
+            <li><a href="#menu">useEffect Tavuklu Pizza</a></li>
+            <li><a href="#menu">Beyaz Console Frosty</a></li>
+            <li><a href="#menu">Testler Geçti Mutlu Burger</a></li>
+            <li><a href="#menu">Position Absolute Acı Burger</a></li>
+          </ul>
+        </nav>
+
+        <section class="instagram" aria-labelledby="instagram-title">
+          <h2 id="instagram-title">Instagram</h2>
+          <ul class="instagram__gallery">
+            <li>
+              <img
+                src="/assets/iteration-2/footer/insta/li-0.png"
+                alt="Dilimlenmiş karışık pizza"
+                width="95"
+                height="95"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/iteration-2/footer/insta/li-1.png"
+                alt="Izgarada pişen sosisler"
+                width="95"
+                height="95"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/iteration-2/footer/insta/li-2.png"
+                alt="Fırından alınan pepperonili pizza"
+                width="95"
+                height="95"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/iteration-2/footer/insta/li-3.png"
+                alt="Cheddar soslu burger"
+                width="95"
+                height="95"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/iteration-2/footer/insta/li-4.png"
+                alt="Patates kızartmasıyla servis edilen burgerler"
+                width="95"
+                height="95"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="/assets/iteration-2/footer/insta/li-5.png"
+                alt="Eritilmiş peynirli hamburger"
+                width="95"
+                height="95"
+                loading="lazy"
+              />
+            </li>
+          </ul>
+        </section>
+
+        <div class="site-footer__bottom">
+          <small>&copy; 2026 Teknolojik Yemekler</small>
+        </div>
+      </footer>
     </div>
   </body>
-
 </html>
