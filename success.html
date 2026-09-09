@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Teknolojik Yemekler siparişinizin başarıyla alındığını gösteren sipariş durumu."
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/iteration-2/icons/2.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Siparişiniz Alındı | Teknolojik Yemekler</title>
+  </head>
+
+  <body class="success-page">
+    <header class="success-header">
+      <img
+        class="success-header__brand"
+        src="/assets/iteration-1/logo.svg"
+        alt="Teknolojik Yemekler"
+        width="363"
+        height="47"
+      />
+    </header>
+
+    <main class="success-main">
+      <section class="success-card" aria-labelledby="success-title">
+        <span class="success-card__icon" aria-hidden="true"></span>
+        <h1 id="success-title">Siparişin alındı</h1>
+        <p class="success-card__status">Restoran onayı bekleniyor</p>
+        <p class="success-card__message">
+          Siparişin onaylandığında hazırlık süreci başlayacak.
+        </p>
+
+        <ol class="order-progress" aria-label="Sipariş durumu">
+          <li class="order-progress__step order-progress__step--active" aria-current="step">
+            <span class="order-progress__marker" aria-hidden="true"></span>
+            <span><span class="sr-only">Mevcut aşama: </span>Alındı</span>
+          </li>
+          <li class="order-progress__step">
+            <span class="order-progress__marker" aria-hidden="true"></span>
+            <span>Hazırlanıyor</span>
+          </li>
+          <li class="order-progress__step">
+            <span class="order-progress__marker" aria-hidden="true"></span>
+            <span>Yolda</span>
+          </li>
+        </ol>
+
+        <a class="button button--success" href="./index.html#menu">Menüye Dön</a>
+      </section>
+    </main>
+  </body>
+</html>

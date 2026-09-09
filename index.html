@@ -241,7 +241,7 @@
             </div>
           </div>
 
-          <form class="order-form">
+          <form class="order-form" action="./success.html" method="get">
             <div class="form-field">
               <label for="customer-name">Adınız</label>
               <input
@@ -349,7 +349,31 @@
             <div class="order-form__footer">
               <div class="form-field form-field--quantity">
                 <label for="quantity">Adet</label>
-                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" />
+                <div class="quantity-control">
+                  <button
+                    class="quantity-control__button"
+                    type="button"
+                    aria-label="Adedi azalt"
+                  >
+                    −
+                  </button>
+                  <input
+                    class="quantity-control__input"
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    value="1"
+                    min="1"
+                    max="10"
+                  />
+                  <button
+                    class="quantity-control__button"
+                    type="button"
+                    aria-label="Adedi artır"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
 
               <dl class="order-summary">
