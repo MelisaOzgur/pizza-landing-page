@@ -1,83 +1,94 @@
-# Pizza Sipariş Formu - Tasarımdan Koda I
+# Teknolojik Yemekler — Responsive Pizza Landing Page
 
-Bu proje, Workintech Full Stack Web Geliştirme eğitimindeki S8 sunuma hazırlık olarak, HTML ve CSS becerilerini geliştirmeniz için tasarlanmıştır. Bu projede, sadece HTML ve CSS kullanarak verilen tasarımı aynen uygulamanız beklenmektedir. Figma tasarım dosyasını referans alarak, sayfanızın görsel yapısını oluşturun.
+Workintech HTML/CSS challenge kapsamında geliştirilen bu proje, verilen tasarım dili temel alınarak hazırlanmış statik bir yemek sipariş deneyimidir. Tasarım; semantic HTML, erişilebilir form yapısı, responsive yerleşim ve kontrollü CSS mikro etkileşimleriyle özelleştirilmiştir.
 
-**Amaç:**
+## Bağlantılar
 
-- Verilen Figma tasarımına birebir uyan, mobil ve desktop uyumlu statik bir HTML yapısı oluşturmak.
-- CSS kullanarak formu ve sayfayı şekillendirmek.
-- JavaScript kullanmadan temel bir form yapısı oluşturmak.
+- [GitHub Repository](https://github.com/MelisaOzgur/pizza-landing-page)
+- [Uyarlanmış Final Figma](https://www.figma.com/design/FPMtzbKHVAoxZgMvoKpnLv/Teknolojik-Yemekler---Pizza-Landing-Page?node-id=39703-2)
 
-**Gereksinimler:**
+## Öne Çıkan Özellikler
 
-- Visual Studio Code
-- Node.js ve npm (Node Package Manager) bilgisayarınızda kurulu olmalıdır. Eğer kurulu değilse, [Node.js resmi web sitesinden](https://nodejs.org) LTS versiyonunu indirebilirsiniz.
+- Semantic HTML5 yapısı
+- Mobile-first responsive tasarım
+- CSS Grid ve Flexbox kullanımı
+- CSS custom properties ile oluşturulan tasarım sistemi
+- Klavye erişilebilirliği ve görünür focus stilleri
+- `label`, `fieldset`, `legend` ve anlamlı alternatif metin kullanımı
+- Özelleştirilmiş checkbox ve radio kontrolleri
+- Hover, active ve giriş mikro etkileşimleri
+- `prefers-reduced-motion` desteği
+- Native form doğrulaması
+- Statik sipariş başarı ve durum ekranı
+- Masaüstü, tablet ve mobil kırılımlar
 
-**Başlangıç:**
+## Kullanılan Teknolojiler
 
-1. **Create Repo From Template & Clone:**
+- HTML5
+- CSS3
+- Vite
+- npm
 
-   - Sağ üstteki yeşil "Use this template" butonu ile, bir kopya oluşturun. işlemi tamamlandıktan sonra, kendi GitHub hesabınızda yer alan depo bağlantısını kopyalayın.
-   - VS Code'u açın ve terminali başlatın. Aşağıdaki komutu kullanarak depoyu bilgisayarınıza klonlayın:
-     ```sh
-     git clone <Yeni-Repo-URL'niz>
-     ```
-   - Örnek:
-     ```sh
-     git clone https://github.com/sizin-hesabiniz/fsweb-s5-bonus-challenge-html-pizza
-     ```
+## Sayfalar
 
-2. **VS Code'da Geliştirmeye Başlamak:**
-   - VS Code'u açın ve `File -> Open Folder` seçeneğiyle projeyi açın.
+- `index.html`: Hero alanını, kategori ve kampanya bölümlerini, ürün kartlarını ve statik sipariş formunu içeren ana landing page.
+- `success.html`: Belirli bir ürün veya dinamik sipariş verisi göstermeyen, statik sipariş onay ve durum ekranı.
 
-- Terminalde aşağıdaki komutları sırasıyla çalıştırarak proje bağımlılıklarını yükleyin ve projeyi başlatın:
-  ```sh
-  npm install
-  npm run dev
-  ```
+## Kurulum ve Çalıştırma
 
-3. **Geliştirmeye Başlayın** 🤓 👩‍💻 🧑‍💻
+Projeyi yerel ortamınıza klonlayın:
 
-#### Proje Yapısı
+```bash
+git clone https://github.com/MelisaOzgur/pizza-landing-page.git
+cd pizza-landing-page
+npm install
+npm run dev
+```
 
-- `index.html`: Ana HTML dosyanız.
-- `style.css`: Tüm stillerinizin bulunduğu CSS dosyası.
-- `assets/`: Projede kullanacağınız tüm resim ve diğer statik dosyalar sizin için önden dışarı aktarıldı.
-- `index.html` dosyasını düzenleyerek HTML yapısını oluşturun.
-- Figma tasarımını ([S6 Pizza v2.1 Mobil](https://www.figma.com/design/B6rGWNjWqVyvuB9htLyIMR/S6-Challange-v2.1?node-id=0-1&t=FwsCbqkh8NWchoPX-1))
--  referans alarak CSS (`style.css`) ile sayfayı ve formu şekillendirin.
+Üretim build'i oluşturmak için:
 
-#### Renk Kodları
+```bash
+npm run build
+```
 
-1. Sarı #FDC913
-2. Açık Gri: #5F5F5F
-3. Koyu Gri #292929
-4. Kırmızı #CE2829
-5. Bej: #FAF7F2
+## Proje Yapısı
 
-#### Tasarımda Kullanılan Fontlar
+```text
+pizza-landing-page/
+├── README.md          # Proje dokümantasyonu
+├── index.html         # Landing page ve sipariş formu
+├── success.html       # Statik sipariş onay ekranı
+├── style.css          # Tasarım sistemi ve responsive stiller
+├── vite.config.js     # Çok sayfalı üretim build yapılandırması
+└── public/
+    └── assets/        # Logo, ikon ve yemek görselleri
+```
 
-Logo proje klasöründe SVG olarak yüklü
+## Teknik Yaklaşım
 
-- [Roboto Condensed](https://fonts.google.com/specimen/Roboto+Condensed)
-- [Barlow](https://fonts.google.com/specimen/Barlow)
-- [Quattrocento](https://fonts.google.com/specimen/Quattrocento)
-- [Satisfy](https://fonts.google.com/specimen/Satisfy)
+Stiller mobile-first yaklaşımla oluşturulmuştur. Temel kurallar küçük ekranları hedefler; yaklaşık `768px` tablet ve `1024px` masaüstü breakpoint'leriyle çok sütunlu düzenlere geçilir.
 
-**Önemli Notlar:**
+CSS Grid; kampanya yerleşiminde, ürün kartlarında, form seçeneklerinde, footer bölümlerinde ve sipariş durum göstergesinde kullanılır. Flexbox ise hero içeriği, kategori navigasyonu, kart içi hizalamalar ve form kontrolleri gibi tek boyutlu düzenleri yönetir.
 
-- Bu projede JavaScript kullanmayacaksınız. Form işlevsel olmayacak, sadece statik olarak geliştirilecek.
-- Figma tasarımına sadık kalarak mobil ve masaüstü ekranlarda, düzgün dengeli bir görünüm sağlamayı hedefleyin.
-- HTML yapınızın anlamsal (semantic) olmasına özen gösterin.
-- CSS'te class isimlendirmesi ve kod düzenine dikkat edin.
+Renkler, tipografi, spacing değerleri, radius ölçüleri, gölgeler ve container genişlikleri `:root` altında CSS değişkenleriyle tanımlanır. Form elemanları semantic HTML yapısını ve klavye kullanımını korurken görünür `focus-visible` stilleriyle desteklenir. Hareket azaltma tercihi bulunan kullanıcılar için animasyon ve geçişler `prefers-reduced-motion` medya sorgusuyla etkisiz hale getirilir.
 
-**Kaynaklar:**
+Vite, `index.html` ve `success.html` dosyalarını ayrı girişler olarak işleyen çok sayfalı bir production build oluşturacak şekilde yapılandırılmıştır.
 
-- **Figma Tasarımı:** ([S6 Pizza v2.1 Mobil](https://www.figma.com/design/B6rGWNjWqVyvuB9htLyIMR/S6-Challange-v2.1?node-id=0-1&t=FwsCbqkh8NWchoPX-1))
-- **CSS içerisinde değişken tanımlayıp, yeniden kullanabilmek:** [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+## Statik Kapsam
 
-## Sorularınız mı Var?
+Uygulama JavaScript mantığı içermez. Adet artırma ve azaltma butonları ile sipariş durum göstergesi, ödev kapsamına uygun olarak yalnızca görseldir. Form, tarayıcının native doğrulaması tamamlandıktan sonra `GET` yöntemiyle `success.html` sayfasına yönlenir. `vite.config.js` yalnızca build yapılandırmasıdır; uygulama davranışı eklemez.
 
-Eğer herhangi bir sorunla karşılaşırsanız, lütfen eğitmeninize başvurun.
+## Tasarım ve Kaynaklar
 
-İyi eğlenceler ve kodlamalar! 🍕
+Workintech tarafından sağlanan tasarımlar referans alınmış; final ekranlar projenin tamamlanan HTML/CSS uygulamasıyla uyumlu olacak şekilde uyarlanmıştır.
+
+- [Workintech başlangıç deposu](https://github.com/Workintech/fsweb-s4-bonus-challenge-html-pizza)
+- [Orijinal S6 Figma](https://www.figma.com/design/B6rGWNjWqVyvuB9htLyIMR/S6-Challange-v2.1)
+- [S8 Pizza React Challenge referansı](https://www.figma.com/design/q0xPW5uCel3rdzFgpjR9lt/S8-Pizza-React-Challange-v2.1)
+- [Uyarlanmış Final Figma](https://www.figma.com/design/FPMtzbKHVAoxZgMvoKpnLv/Teknolojik-Yemekler---Pizza-Landing-Page?node-id=39703-2)
+
+## Geliştirici
+
+Melisa Özgür
+
+GitHub: [github.com/MelisaOzgur](https://github.com/MelisaOzgur)
